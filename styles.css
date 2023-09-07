@@ -1,29 +1,174 @@
 /* Style the navbar */
 nav {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
+}
+
+/* Style the navbar list items */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  padding: 10px;
+}
+
+/* Style the navbar links */
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Change link color on hover */
+nav a:hover {
+  color: #00aaff;
+}
+
+/* Logo */
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Search Bar */
+.search-bar {
+  flex: 1; /* Make it flexible to take available space */
+  display: flex;
+  align-items: center;
+  margin: 0 20px; /* Adjust margins as needed */
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Login/Register */
+.login-register {
+  margin-right: 20px; /* Adjust margins as needed */
+  padding: 10px;
+}
+
+.login-register a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .search-bar {
+    margin: 0; /* Remove margin for smaller screens */
   }
-  
-  /* Style the navbar list items */
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
+
+  .login-register {
+    margin-right: 10px; /* Adjust margin for smaller screens */
   }
-  
-  nav li {
-    padding: 10px;
-  }
-  
-  /* Style the navbar links */
-  nav a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  /* Change link color on hover */
-  nav a:hover {
-    color: #00aaff;
-  }
-  
+}
+
+/* Social Media Icons (aligned to the right) */
+.social-icons {
+  float: right;
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+.social-icon {
+  text-decoration: none;
+  margin-right: 10px; /* Adjust margin between icons as needed */
+}
+
+/* Set the same width and height for social media icons */
+.social-icon img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+}
+
+/* Phone Number (below social media icons) */
+.phone-number {
+  text-align: right; /* Align the text to the right */
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.phone-number p {
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+/* Resetting some default styles */
+body, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Overall Layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adding space between the sidebar and product catalog, as well as between product cards */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  flex: 1; /* Take up 1 portion of the main content area */
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+  margin-bottom: 15px;
+  /* Additional styles can be added for the sidebar items if needed */
+}
+
+/* Product Catalog */
+.product-catalog {
+  flex: 3; /* Take up 3 portions of the main content area */
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; /* Adds space between product cards */
+}
+
+.product-card {
+  width: 100%; /* Each product card takes the full width of the .product-catalog */
+  display: flex;
+  justify-content: space-between; /* Distributes the products evenly within the card */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px; /* Adds space between product cards when they stack */
+}
+
+.product-item {
+  flex: 1; /* Distributes space equally between products in a card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px; /* Some padding between product items for spacing */
+}
+
+.product-item img {
+  max-width: 80%; /* You can adjust this to your preference */
+  height: auto;
+}
+
+.product-title, .product-price, .product-description {
+  text-align: center;
+  margin: 10px 0;
+}
